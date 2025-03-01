@@ -23,6 +23,6 @@ app.use("/api/files", authMiddleware, fileRoutes);
 
 export default app;
 app.get("/", (req, res) => {
-    res.send("Welcome to the S3 File Management API");
+    res.send("Welcome to the CloudX API");
 });
 
