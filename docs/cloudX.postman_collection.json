@@ -1,0 +1,99 @@
+{
+	"info": {
+		"_postman_id": "34e55340-c3f2-435d-856d-b8a8c5e24ed5",
+		"name": "cloudX",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39673084"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "login-user",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "files",
+			"item": [
+				{
+					"name": "upload-file",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "get-all-files",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "get slots",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    1 //payload for post creation of booking\r\n    \"name\": \"Amal\",\r\n    \"phone_number\": \"949494343\",\r\n    \"date\": \"12-12-2024\",\r\n    \"time\": \"12:00:11\"\r\n    // respones \r\n    { succefull created\r\n    }\r\n\r\n\r\n   2 //get slots api/booking?date=12-13-2000\r\n    //respose\r\n    \"date\": \"12-12-2024\",\r\n    \"time\": \"12:00:11\"\r\n\r\n\r\n\r\n\r\n  3 // already bookked \r\n    ///\r\n    // \"resoponse\"\r\n    \"name\": \"Amal\",\r\n    \"phone_number\": \"949494343\",\r\n    \"date\": \"12-12-2024\",\r\n    \"time\": \"12:00:11\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/booking/slots?date=\"26-02-2025\"",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"booking",
+						"slots"
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "\"26-02-2025\""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "creating booking",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Get booked solts",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
