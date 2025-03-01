@@ -86,7 +86,7 @@ export const listFiles = async (user, folder = "", expiry = 36000) => {
                     key: file.Key,
                     url: signedUrl,
                     size: dbFile?.size || file.Size,
-                    sizeFormatted: formatFileSize(dbFile?.size || file.Size),
+                    size_formatted: formatFileSize(dbFile?.size || file.Size),
                     mime_type: dbFile?.mime_type || "unknown",
                     created_at: dbFile?.created_at || new Date(0), // Use old date if missing
                 };
