@@ -3,17 +3,10 @@ import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
 import File from "../models/file.model.js";
 import dotenv from "dotenv";
 import { Readable } from "stream";
+import s3 from "../config/s3.js";
 
 dotenv.config();
 
-// Initialize S3 Client
-const s3 = new S3Client({
-    region: process.env.AWS_REGION,
-    credentials: {
-        accessKeyId: process.env.AWS_ACCESS_KEY,
-        secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
-    }
-});
 
 // Upload file to S3
 export const uploadFile = async (user, file, folder = "") => {
